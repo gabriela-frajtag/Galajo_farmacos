@@ -9,7 +9,9 @@ Neste projeto, propomos a utilização de redes neurais (NN) para prever a solub
 ### o que é LogP
 O coeficiente de partição octanol-água (LogP) é uma medida experimental amplamente utilizada na química e na farmacologia para avaliar a lipofilicidade de compostos químicos. Ele representa o logaritmo da razão das concentrações de um soluto em duas fases imiscíveis: octanol e água. O experimento para fazer essa medida, de maneira simplificada, A fórmula para calcular o LogP é:
 
-$$text{LogP} = \log \left( \frac{[\text{Solute}]_{\text{oct}}}{[\text{Solute}]_{\text{water}}} \right)$$
+```math
+LogP = \log \left( \frac{[\text{Soluto}]_{\text{oct}}}{[\text{Soluto}]_{\text{água}}} \right)
+```
 
 
 
