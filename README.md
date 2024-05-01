@@ -19,3 +19,6 @@ O coeficiente de partição octanol-água (LogP) é uma medida experimental ampl
 LogP = \log \left( \frac{[\text{Soluto}]_{\text{oct}}}{[\text{Soluto}]_{\text{água}}} \right)
 ```
 Se um laboratório está realizando um projeto de triagem, é provável que precise avaliar um grande número de compostos. No entanto, realizar a medida experimental do LogP para cada um desses compostos é inviável, já que o processo experimental para muitos compostos é demorado e caro, se tornando impraticável. Dessa forma, abordagens computacionais, como o uso de redes neurais, surgem como alternativas viáveis para prever o LogP de grandes conjuntos de compostos, a fim de selecionar os mais interessantes para prosseguir na parte experimental.
+
+
+### Como representar moléculas computacionalmente
