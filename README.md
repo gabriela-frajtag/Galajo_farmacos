@@ -22,3 +22,6 @@ Se um laboratório está realizando um projeto de triagem, é provável que prec
 
 
 ### Como representar moléculas computacionalmente
+Antes de começarmos a prever características de uma moléculas, precisamos entender o básico: como representamos moléculas computacionalmente para que essas representações sejam usadadas em modelos preditivos? Para fazer isso, usamos os chamados métodos de _featurização molecular_ (molecular featurizations). Esses métodos convertem a estrutura complexa das moléculas em representações numéricas que podem ser processadas por algoritmos de aprendizado de máquina. Existem várias técnicas de featurização molecular disponíveis, cada uma capturando diferentes aspectos da estrutura e propriedades das moléculas.
+
+
