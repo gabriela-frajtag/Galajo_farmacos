@@ -22,6 +22,25 @@ Se um laboratório está realizando um projeto de triagem, é provável que prec
 
 
 ### Como representar moléculas computacionalmente
-Antes de começarmos a prever características de uma moléculas, precisamos entender o básico: como representamos moléculas computacionalmente para que essas representações sejam usadadas em modelos preditivos? Para fazer isso, usamos os chamados métodos de _featurização molecular_ (do inglês, "molecular featurizations"). Esses métodos convertem a estrutura complexa das moléculas em representações numéricas que podem ser processadas por algoritmos de aprendizado de máquina. Existem várias técnicas de featurização molecular disponíveis, cada uma capturando diferentes aspectos da estrutura e propriedades das moléculas.
+Antes de começarmos a prever características de uma molécula, precisamos entender o básico: como representamos moléculas computacionalmente para que essas representações sejam usadas em modelos preditivos? Para fazer isso, usamos os chamados métodos de featurização molecular (do inglês, "molecular featurizations"). Esses métodos convertem a estrutura complexa das moléculas em representações numéricas que podem ser processadas por algoritmos de aprendizado de máquina. Existem várias técnicas de featurização molecular disponíveis, cada uma capturando diferentes aspectos da estrutura e propriedades das moléculas, como vetores de descritores químicos, representação da molécula em um grafo 2D, representações tridimensionais, coordenadas atômicas, energia livre, entre outros. A ferramenta de quimioinformática Rdkit, que usaremos no projeto, possui mais de 208 descritores moleculares [2]
+Nesse projeto, usaremos a biblioteca **deepchem** (dc) como principal ferramenta em todas as etapas. Ela já conta com um submódulo justamente para fazer o faturization chamado *dc.feat*
+
+
+
+
+
+
+
+
+## Referências
+[1] RAMSUNDAR, Bharath et al. Deep learning for the life sciences: applying deep learning to genomics, microscopy, drug discovery, and more. " O'Reilly Media, Inc.", 2019. <br>
+[2] Landrum, G. (2022, 23 de dezembro). Descriptor tutorial. Recuperado de https://greglandrum.github.io/rdkit-blog/posts/2022-12-23-descriptor-tutorial.html
+
+
+
+
+
+
+
 
 
