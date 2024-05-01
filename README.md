@@ -4,7 +4,11 @@
 ## Introdução
 Neste projeto, propomos a utilização de redes neurais (NN) para prever a solubilidade de compostos químicos, um fator crucial na absorção de fármacos (ADME: Absorção, Distribuição, Metabolismo e Excreção). A solubilidade de um composto é um indicador importante de sua capacidade de ser absorvido pelo corpo humano, portanto, sua predição é essencial no desenvolvimento de novos medicamentos.
 
-![ADME (imagem retirada da wikipédia](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Pharmacokinetics.svg/1200px-Pharmacokinetics.svg.png)
+<figure>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Pharmacokinetics.svg/1200px-Pharmacokinetics.svg.png" alt="Diagrama ADME" width="300" height="300">
+  <figcaption>Diagrama ADME (imagem retirada da Wikipedia)</figcaption>
+</figure>
+
 
 ## Teoria 
 
