@@ -3,6 +3,8 @@
 
 ## Introdução
 Neste projeto, propomos a utilização de redes neurais (NN) para prever a solubilidade de compostos químicos, um fator crucial na absorção de fármacos (ADME: Absorção, Distribuição, Metabolismo e Excreção). A solubilidade de um composto é um indicador importante de sua capacidade de ser absorvido pelo corpo humano, portanto, sua predição é essencial no desenvolvimento de novos medicamentos.
+Se um laboratório está realizando um projeto de triagem, é provável que precise avaliar um grande número de compostos. No entanto, realizar a medida experimental do LogP para cada um desses compostos é inviável, já que o processo experimental para muitos compostos é demorado e caro, se tornando impraticável. Dessa forma, abordagens computacionais, como o uso de redes neurais, surgem como alternativas viáveis para prever o LogP de grandes conjuntos de compostos, a fim de selecionar os mais interessantes para prosseguir na parte experimental.
+
 
 <figure>
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Pharmacokinetics.svg/1200px-Pharmacokinetics.svg.png" alt="Diagrama ADME" width="300" height="300">
@@ -18,7 +20,6 @@ O coeficiente de partição octanol-água (LogP) é uma medida experimental ampl
 ```math
 LogP = \log \left( \frac{[\text{Soluto}]_{\text{oct}}}{[\text{Soluto}]_{\text{água}}} \right)
 ```
-Se um laboratório está realizando um projeto de triagem, é provável que precise avaliar um grande número de compostos. No entanto, realizar a medida experimental do LogP para cada um desses compostos é inviável, já que o processo experimental para muitos compostos é demorado e caro, se tornando impraticável. Dessa forma, abordagens computacionais, como o uso de redes neurais, surgem como alternativas viáveis para prever o LogP de grandes conjuntos de compostos, a fim de selecionar os mais interessantes para prosseguir na parte experimental.
 
 
 ### Como representar moléculas computacionalmente
