@@ -3,7 +3,9 @@
 </div>
 
 # Fármacos Solução 
-
+Grupo: Quatro Cientistas e Um Algoritmo
+Integrantes: Bruno Ferreira Brischi, Cauê Gomes Correia dos Santos, Gabriela Frajtag, Karla Rovedo Pascoalini
+Instituição: Ilum - Escola de ciência
 
 
 ## Introdução
