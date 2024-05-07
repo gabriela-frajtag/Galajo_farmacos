@@ -2,7 +2,7 @@
         <img src="logo_projeto_final.jpg" style="width: 356px; height:356px; margin-right: 20px;" />
 </div>
 
-# Fármacos Solução 
+# Fármacos SOLução 
 
 **Grupo:** Galajo
 <br>
