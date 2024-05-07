@@ -59,13 +59,20 @@ LogP = \log \left( \frac{[\text{Soluto}]_{\text{oct}}}{[\text{Soluto}]_{\text{á
 O cLogP, ou LogP calculado, é uma estimativa do coeficiente de partição octanol-água (LogP) de um composto que é calculado usando métodos de quimioinformática ou química computacional. Ao contrário do LogP experimental, que é determinado por meio de testes laboratoriais, o cLogP é calculado com base na estrutura molecular do composto e em modelos matemáticos ou algoritmos específicos.
 
 
-### Método ESOL
+### Dataset e ESOL
 Em 2004, John S. Delaney publicou o artigo "ESOL: Estimating Aqueous Solubility Directly from Molecular Structure", no qual ele propôs um método para estimar o LogS de um composto diretamente a partir de sua estrutura molecular. Esse método utiliza uma regressão linear com diversos parâmetros, sendo o $cLogP$ o mais significativo, seguido pelo peso molecular, proporção de átomos aromáticos e número de ligações rotáveis. [3]
 
-Neste projeto, estamos desenvolvendo uma rede neural que inclui os três últimos parâmetros mais significativos mencionados no artigo de Delaney, além de outros presentes no conjunto de dados fornecido (é recebido diretamente no notebook jupyter, podendo ser acessado [aqui](https://raw.githubusercontent.com/deepchem/deepchem/master/datasets/delaney-processed.csv). )  Ao todo, o dataset contém 1128 moléculas. No entanto, não calculamos (e, consequentemente) nem usamos o cLogP, pois queremos avaliar o impacto dessa omissão no desempenho do nosso modelo. Nosso objetivo é determinar se podemos ainda produzir um modelo suficientemente preciso sem esse parâmetro
+Neste projeto, estamos desenvolvendo uma rede neural que inclui os três últimos parâmetros mais significativos mencionados no artigo de Delaney, além de outros presentes no conjunto de dados fornecido (é recebido diretamente no notebook jupyter, podendo ser acessado [aqui](https://raw.githubusercontent.com/deepchem/deepchem/master/datasets/delaney-processed.csv). )  Ao todo, o dataset contém 1128 moléculas. No entanto, não calculamos (e, consequentemente) nem usamos o cLogP, pois queremos avaliar o impacto dessa omissão no desempenho do nosso modelo. Nosso objetivo é determinar se podemos ainda produzir um modelo suficientemente preciso sem esse parâmetro. Os features usados foram o seguinte:
+* Minimum Degree (Grau de Liberadade Mínimo)
+* Molecular Weight (Peso Molecular)
+* Number of H-Bond Donors (Número de Doadores de Ligações de Hidrogênio)
+* Number of Rings (Número de Anéis)
+* Number of Rotatable Bonds (Número de Ligações Rotacionáveis)
+* Polar Surface Area (Área de Superfície Polar)
+* Aromatic Proportion (Proporção Aromática)
 
 
-### Conclusão
+## Conclusão
 Conseguimos criar um modelo que de fato prevê com baixo erro a solubilidade das moléculas. Algo a se notar, porém, é que, por se tratar de uma rede neural, não conseguimos avaliar a regressão de maneira explícita, como no artigo de Delaney, que chegou nos coeficientes da seguinte expressão
 $LogS = 0.16 - 0.63 cLogP - 0.0062 MW + 0.066 RB - 0.74 AP$. Concluindo, é interessante observar que conseguimos criar um modelo para prever o logS sem o que seria o parâmetro mais significativo, o cLogP.
 
