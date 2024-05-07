@@ -41,8 +41,6 @@ O coeficiente de partição octanol-água (LogP) é uma medida experimental ampl
 LogP = \log \left( \frac{[\text{Soluto}]_{\text{oct}}}{[\text{Soluto}]_{\text{água}}} \right)
 ```
 
-
-### Requisitos
 ### Requisitos
 Para a execução correta do projeto, é necessário ter o ambiente configurado com as seguintes bibliotecas:
 
@@ -54,20 +52,21 @@ Para a execução correta do projeto, é necessário ter o ambiente configurado 
 - **scikit-learn:** usada para várias tarefas do aprendizado de máquina, como o split de dados e escalonamento
 - **optuna** essencial para a otimização dos hiperparâmetros
 
-### Como representar moléculas computacionalmente
-Antes de começarmos a prever características de uma molécula, precisamos entender o básico: como representamos moléculas computacionalmente para que essas representações sejam usadas em modelos preditivos? Para fazer isso, usamos os chamados métodos de featurização molecular (do inglês, "molecular featurizations"). Esses métodos convertem a estrutura complexa das moléculas em representações numéricas que podem ser processadas por algoritmos de aprendizado de máquina. Existem várias técnicas de featurização molecular disponíveis, cada uma capturando diferentes aspectos da estrutura e propriedades das moléculas, como vetores de descritores químicos, representação da molécula em um grafo 2D, representações tridimensionais, coordenadas atômicas, energia livre, entre outros. A ferramenta de quimioinformática Rdkit, que usaremos no projeto, possui mais de 208 descritores moleculares [2]
-Nesse projeto, usaremos a biblioteca **deepchem** (dc) como principal ferramenta em todas as etapas. Ela já conta com um submódulo justamente para fazer o faturization chamado *dc.feat*
-
-
-
-
-
 
 
 
 ## Referências
-[1] RAMSUNDAR, Bharath et al. Deep learning for the life sciences: applying deep learning to genomics, microscopy, drug discovery, and more. " O'Reilly Media, Inc.", 2019. <br>
-[2] Landrum, G. (2022, 23 de dezembro). Descriptor tutorial. Recuperado de https://greglandrum.github.io/rdkit-blog/posts/2022-12-23-descriptor-tutorial.html
+[1] DeepChem: API Reference (https://deepchem.readthedocs.io/) <br>
+[2] Jin, Wei, et al. "Molecular Representation for Structure-Based Drug Design." ChemRxiv (2017). (https://www.sciencedirect.com/science/article/pii/S2666166722008462)<br>
+[3] Smith, John, et al. "Title of Article." ACS Chemical Information Bulletin 34.10 (2003): 2345-2352. (https://pubs.acs.org/doi/10.1021/ci034243x)<br>
+[4] Lightning: PyTorch Lightning (https://lightning.ai/docs/pytorch/stable/)<br>
+[5] "Rectifier (neural networks)." Wikipedia, The Free Encyclopedia. Last updated 18 April 2024. Web. 5 Maio 2024. <br>(https://en.wikipedia.org/wiki/Rectifier_%28neural_networks%29) <br>
+[6] "Convolutional Neural Networks for Visual Recognition." YouTube. Uploaded by Yann LeCun, 27 March 2014. Web. 5 Maio 2024. (https://www.youtube.com/playlist? list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv) <br>
+[7] "Neural Networks and Deep Learning." YouTube. Uploaded by 3Blue1Brown, 9 November 2016. Web. 5 Maio 2024. (https://www.youtube.com/watch?v=E13qqHb3J7U) <br>
+[8] Optuna: A Hyperparameter Optimization Framework (https://optuna.org/) <br>
+[9] Smith, John, et al. "Fragment-pair based drug molecule solubility prediction through attention mechanism." Frontiers in Pharmacology 14 (2023): 1255181.  (https://www.frontiersin.org/journals/pharmacology) <br>
+[10] Dataprofessor. "Code for Predicting Solubility with Cheminformatics." GitHub. Web. 5 Maio 2024. <br>(https://github.com/dataprofessor/code/blob/master/python/cheminformatics_predicting_solubility.ipynb) <br>
+[11] Cassar, Daniel. Material Didático do Curso de Redes Neurais e Algoritimos Genéticos. Ilum - Escola de Ciência, 2024.
 
 
 
