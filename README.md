@@ -23,6 +23,12 @@ Se um laboratório está realizando um projeto de triagem, é provável que prec
   <figcaption>Diagrama ADME (imagem retirada da Wikipedia)</figcaption>
 </figure>
 
+## Estrutura do Repositório
+
+Nesse repositório, há três arquivos:
+* projeto_NN.ipynb
+* logo_projeto_final.jpg
+* README.md
 
 ## Teoria 
 
@@ -35,6 +41,18 @@ O coeficiente de partição octanol-água (LogP) é uma medida experimental ampl
 LogP = \log \left( \frac{[\text{Soluto}]_{\text{oct}}}{[\text{Soluto}]_{\text{água}}} \right)
 ```
 
+
+### Requisitos
+### Requisitos
+Para a execução correta do projeto, é necessário ter o ambiente configurado com as seguintes bibliotecas:
+
+- **rdkit:** ferramenta de quimioinformática que usada para utilizar objetos moleculares
+- **lightning:** estrutura de treinamento de modelos flexível e escalável para PyTorch.
+- **matplotlib:** utilizado para plotar e visualizar de dados 
+- **pandas:** biblioteca para recebimento e análise de dados em Python
+- **torch:** utilizada para a criação do modelo de Redes Neurais
+- **scikit-learn:** usada para várias tarefas do aprendizado de máquina, como o split de dados e escalonamento
+- **optuna** essencial para a otimização dos hiperparâmetros
 
 ### Como representar moléculas computacionalmente
 Antes de começarmos a prever características de uma molécula, precisamos entender o básico: como representamos moléculas computacionalmente para que essas representações sejam usadas em modelos preditivos? Para fazer isso, usamos os chamados métodos de featurização molecular (do inglês, "molecular featurizations"). Esses métodos convertem a estrutura complexa das moléculas em representações numéricas que podem ser processadas por algoritmos de aprendizado de máquina. Existem várias técnicas de featurização molecular disponíveis, cada uma capturando diferentes aspectos da estrutura e propriedades das moléculas, como vetores de descritores químicos, representação da molécula em um grafo 2D, representações tridimensionais, coordenadas atômicas, energia livre, entre outros. A ferramenta de quimioinformática Rdkit, que usaremos no projeto, possui mais de 208 descritores moleculares [2]
