@@ -34,12 +34,22 @@ Nesse repositório, há três arquivos:
 
 ### o que é LogS
 
+O LogS, ou Logaritmo da Solubilidade em Água, é uma medida que descreve a solubilidade de um composto em água. Ele representa a concentração molar do composto em uma solução aquosa saturada, expressa em uma escala logarítmica de base 10. Em outras palavras, o LogS indica a quantidade de moles de um composto que podem se dissolver em um litro de água antes que a solução fique saturada. Quanto maior o valor do LogS, maior a solubilidade do composto em água. Um valor positivo de LogS indica que o composto é solúvel em água, enquanto um valor negativo indica que o composto é insolúvel ou pouco solúvel. [9]
+
 ### o que é LogP
 O coeficiente de partição octanol-água (LogP) é uma medida experimental amplamente utilizada na química e na farmacologia para avaliar a lipofilicidade de compostos químicos. Ele representa o logaritmo da razão das concentrações de um soluto em duas fases imiscíveis: octanol e água. O experimento para fazer essa medida, simplificadamente, envolve agitar uma quantidade medida de um composto com volumes definidos de água e n-octanol, um solvente bastante lipofílico. Após a agitação, mede-se a quantidade do composto que acaba em cada camada (água e octanol), e então calcula-se o logaritmo da razão entre as concentrações do composto nas duas fases. A fórmula para calcular o LogP é:
 
 ```math
 LogP = \log \left( \frac{[\text{Soluto}]_{\text{oct}}}{[\text{Soluto}]_{\text{água}}} \right)
 ```
+
+O cLogP, ou LogP calculado, é uma estimativa do coeficiente de partição octanol-água (LogP) de um composto que é calculado usando métodos de quimioinformática ou química computacional. Ao contrário do LogP experimental, que é determinado por meio de testes laboratoriais, o cLogP é calculado com base na estrutura molecular do composto e em modelos matemáticos ou algoritmos específicos.
+
+
+### Método ESOL
+Em 2004, John S. Delaney publicou o artigo "ESOL: Estimating Aqueous Solubility Directly from Molecular Structure", no qual ele propôs um método para estimar o LogS de um composto diretamente a partir de sua estrutura molecular. Esse método utiliza uma regressão linear com diversos parâmetros, sendo o $\text{log}P_{\text{octanol}}$ o mais significativo, seguido pelo peso molecular, proporção de átomos aromáticos e número de ligações rotáveis. [1]
+
+Neste projeto, estamos desenvolvendo uma rede neural que inclui os três últimos parâmetros mais significativos mencionados no artigo de Delaney, além de outros presentes no conjunto de dados fornecido (é recebido diretamente no notebook jupyter, podendo ser acessado [aqui](https://raw.githubusercontent.com/deepchem/deepchem/master/datasets/delaney-processed.csv).   Ao todo, o dataset contém 1128 moléculas. No entanto, não calculamos (e, consequentemente) nem usamos o cLogP, pois queremos avaliar o impacto dessa omissão no desempenho do nosso modelo. Nosso objetivo é determinar se podemos ainda produzir um modelo suficientemente preciso sem esse parâmetro
 
 ### Requisitos
 Para a execução correta do projeto, é necessário ter o ambiente configurado com as seguintes bibliotecas:
