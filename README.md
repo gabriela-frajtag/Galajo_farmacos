@@ -47,7 +47,7 @@ O cLogP, ou LogP calculado, é uma estimativa do coeficiente de partição octan
 
 
 ### Método ESOL
-Em 2004, John S. Delaney publicou o artigo "ESOL: Estimating Aqueous Solubility Directly from Molecular Structure", no qual ele propôs um método para estimar o LogS de um composto diretamente a partir de sua estrutura molecular. Esse método utiliza uma regressão linear com diversos parâmetros, sendo o $\text{log}P_{\text{octanol}}$ o mais significativo, seguido pelo peso molecular, proporção de átomos aromáticos e número de ligações rotáveis. [1]
+Em 2004, John S. Delaney publicou o artigo "ESOL: Estimating Aqueous Solubility Directly from Molecular Structure", no qual ele propôs um método para estimar o LogS de um composto diretamente a partir de sua estrutura molecular. Esse método utiliza uma regressão linear com diversos parâmetros, sendo o $cLogP$ o mais significativo, seguido pelo peso molecular, proporção de átomos aromáticos e número de ligações rotáveis. [3]
 
 Neste projeto, estamos desenvolvendo uma rede neural que inclui os três últimos parâmetros mais significativos mencionados no artigo de Delaney, além de outros presentes no conjunto de dados fornecido (é recebido diretamente no notebook jupyter, podendo ser acessado [aqui](https://raw.githubusercontent.com/deepchem/deepchem/master/datasets/delaney-processed.csv).   Ao todo, o dataset contém 1128 moléculas. No entanto, não calculamos (e, consequentemente) nem usamos o cLogP, pois queremos avaliar o impacto dessa omissão no desempenho do nosso modelo. Nosso objetivo é determinar se podemos ainda produzir um modelo suficientemente preciso sem esse parâmetro
 
@@ -68,13 +68,14 @@ Para a execução correta do projeto, é necessário ter o ambiente configurado 
 ## Referências
 [1] DeepChem: API Reference (https://deepchem.readthedocs.io/) <br>
 [2] Jin, Wei, et al. "Molecular Representation for Structure-Based Drug Design." ChemRxiv (2017). (https://www.sciencedirect.com/science/article/pii/S2666166722008462)<br>
-[3] Smith, John, et al. "Title of Article." ACS Chemical Information Bulletin 34.10 (2003): 2345-2352. (https://pubs.acs.org/doi/10.1021/ci034243x)<br>
+[3] Delaney, John, et al. "ESOL:  Estimating Aqueous Solubility Directly from Molecular Structure
+." ACS Chemical Information Bulletin 34.10 (2003): 2345-2352. (https://pubs.acs.org/doi/10.1021/ci034243x)<br>
 [4] Lightning: PyTorch Lightning (https://lightning.ai/docs/pytorch/stable/)<br>
 [5] "Rectifier (neural networks)." Wikipedia, The Free Encyclopedia. Last updated 18 April 2024. Web. 5 Maio 2024. <br>(https://en.wikipedia.org/wiki/Rectifier_%28neural_networks%29) <br>
 [6] "Convolutional Neural Networks for Visual Recognition." YouTube. Uploaded by Yann LeCun, 27 March 2014. Web. 5 Maio 2024. (https://www.youtube.com/playlist? list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv) <br>
 [7] "Neural Networks and Deep Learning." YouTube. Uploaded by 3Blue1Brown, 9 November 2016. Web. 5 Maio 2024. (https://www.youtube.com/watch?v=E13qqHb3J7U) <br>
 [8] Optuna: A Hyperparameter Optimization Framework (https://optuna.org/) <br>
-[9] Smith, John, et al. "Fragment-pair based drug molecule solubility prediction through attention mechanism." Frontiers in Pharmacology 14 (2023): 1255181.  (https://www.frontiersin.org/journals/pharmacology) <br>
+[9] Liu, Jianping, et al. "Fragment-pair based drug molecule solubility prediction through attention mechanism." Frontiers in Pharmacology 14 (2023): 1255181.  (https://www.frontiersin.org/journals/pharmacology) <br>
 [10] Dataprofessor. "Code for Predicting Solubility with Cheminformatics." GitHub. Web. 5 Maio 2024. <br>(https://github.com/dataprofessor/code/blob/master/python/cheminformatics_predicting_solubility.ipynb) <br>
 [11] Cassar, Daniel. Material Didático do Curso de Redes Neurais e Algoritimos Genéticos. Ilum - Escola de Ciência, 2024.
 
