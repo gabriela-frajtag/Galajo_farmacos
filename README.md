@@ -45,11 +45,11 @@ Para a execução correta do projeto, é necessário ter o ambiente configurado 
 
 ## Teoria 
 
-### o que é LogS
+### O que é LogS
 
 O LogS, ou Logaritmo da Solubilidade em Água, é uma medida que descreve a solubilidade de um composto em água. Ele representa a concentração molar do composto em uma solução aquosa saturada, expressa em uma escala logarítmica de base 10. Em outras palavras, o LogS indica a quantidade de moles de um composto que podem se dissolver em um litro de água antes que a solução fique saturada. Quanto maior o valor do LogS, maior a solubilidade do composto em água. Um valor positivo de LogS indica que o composto é solúvel em água, enquanto um valor negativo indica que o composto é insolúvel ou pouco solúvel. [9]
 
-### o que é LogP
+### O que é LogP
 O coeficiente de partição octanol-água (LogP) é uma medida experimental amplamente utilizada na química e na farmacologia para avaliar a lipofilicidade de compostos químicos. Ele representa o logaritmo da razão das concentrações de um soluto em duas fases imiscíveis: octanol e água. O experimento para fazer essa medida, simplificadamente, envolve agitar uma quantidade medida de um composto com volumes definidos de água e n-octanol, um solvente bastante lipofílico. Após a agitação, mede-se a quantidade do composto que acaba em cada camada (água e octanol), e então calcula-se o logaritmo da razão entre as concentrações do composto nas duas fases. A fórmula para calcular o LogP é:
 
 ```math
@@ -74,7 +74,7 @@ Neste projeto, estamos desenvolvendo uma rede neural que inclui os três último
 
 ## Conclusão
 Conseguimos criar um modelo que de fato prevê com baixo erro a solubilidade das moléculas. Algo a se notar, porém, é que, por se tratar de uma rede neural, não conseguimos avaliar a regressão de maneira explícita, como no artigo de Delaney, que chegou nos coeficientes da seguinte expressão
-$LogS = 0.16 - 0.63 cLogP - 0.0062 MW + 0.066 RB - 0.74 AP$. Concluindo, é interessante observar que conseguimos criar um modelo para prever o logS sem o que seria o parâmetro mais significativo, o cLogP.
+$LogS = 0.16 - 0.63 cLogP - 0.0062 MW + 0.066 RB - 0.74 AP$. Concluindo, é interessante observar que conseguimos criar um modelo para prever o logS sem o que seria o parâmetro mais significativo, o cLogP. Uma perspectiva futura interessante é usar de técnicas para entender o modelo. Uma delas é o uso de valores SHAP (SHapley Additive exPlanations), que atribuem um valor a cada feature, indicando sua contribuição para a predição. 
 
 
 ## Referências
