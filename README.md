@@ -30,6 +30,19 @@ Nesse repositório, há três arquivos:
 * logo_projeto_final.jpg
 * README.md
 
+
+### Requisitos
+Para a execução correta do projeto, é necessário ter o ambiente configurado com as seguintes bibliotecas:
+
+- **rdkit:** ferramenta de quimioinformática que usada para utilizar objetos moleculares
+- **lightning:** estrutura de treinamento de modelos flexível e escalável para PyTorch.
+- **matplotlib:** utilizado para plotar e visualizar de dados 
+- **pandas:** biblioteca para recebimento e análise de dados em Python
+- **torch:** utilizada para a criação do modelo de Redes Neurais
+- **scikit-learn:** usada para várias tarefas do aprendizado de máquina, como o split de dados e escalonamento
+- **optuna** essencial para a otimização dos hiperparâmetros
+
+
 ## Teoria 
 
 ### o que é LogS
@@ -51,18 +64,10 @@ Em 2004, John S. Delaney publicou o artigo "ESOL: Estimating Aqueous Solubility 
 
 Neste projeto, estamos desenvolvendo uma rede neural que inclui os três últimos parâmetros mais significativos mencionados no artigo de Delaney, além de outros presentes no conjunto de dados fornecido (é recebido diretamente no notebook jupyter, podendo ser acessado [aqui](https://raw.githubusercontent.com/deepchem/deepchem/master/datasets/delaney-processed.csv). )  Ao todo, o dataset contém 1128 moléculas. No entanto, não calculamos (e, consequentemente) nem usamos o cLogP, pois queremos avaliar o impacto dessa omissão no desempenho do nosso modelo. Nosso objetivo é determinar se podemos ainda produzir um modelo suficientemente preciso sem esse parâmetro
 
-### Requisitos
-Para a execução correta do projeto, é necessário ter o ambiente configurado com as seguintes bibliotecas:
 
-- **rdkit:** ferramenta de quimioinformática que usada para utilizar objetos moleculares
-- **lightning:** estrutura de treinamento de modelos flexível e escalável para PyTorch.
-- **matplotlib:** utilizado para plotar e visualizar de dados 
-- **pandas:** biblioteca para recebimento e análise de dados em Python
-- **torch:** utilizada para a criação do modelo de Redes Neurais
-- **scikit-learn:** usada para várias tarefas do aprendizado de máquina, como o split de dados e escalonamento
-- **optuna** essencial para a otimização dos hiperparâmetros
-
-
+### Conclusão
+Conseguimos criar um modelo que de fato prevê com baixo erro a solubilidade das moléculas. Algo a se notar, porém, é que, por se tratar de uma rede neural, não conseguimos avaliar a regressão de maneira explícita, como no artigo de Delaney, que chegou nos coeficientes da seguinte expressão
+$LogS = 0.16 - 0.63 cLogP - 0.0062 MW + 0.066 RB - 0.74 AP$. Concluindo, é interessante observar que conseguimos criar um modelo para prever o logS sem o que seria o parâmetro mais significativo, o cLogP.
 
 
 ## Referências
@@ -78,9 +83,6 @@ Para a execução correta do projeto, é necessário ter o ambiente configurado 
 [9] Liu, Jianping, et al. "Fragment-pair based drug molecule solubility prediction through attention mechanism." Frontiers in Pharmacology 14 (2023): 1255181.  (https://www.frontiersin.org/journals/pharmacology) <br>
 [10] Dataprofessor. "Code for Predicting Solubility with Cheminformatics." GitHub. Web. 5 Maio 2024. <br>(https://github.com/dataprofessor/code/blob/master/python/cheminformatics_predicting_solubility.ipynb) <br>
 [11] Cassar, Daniel. Material Didático do Curso de Redes Neurais e Algoritimos Genéticos. Ilum - Escola de Ciência, 2024.
-
-
-
 
 
 
