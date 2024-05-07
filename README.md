@@ -26,9 +26,9 @@ Se um laboratório está realizando um projeto de triagem, é provável que prec
 ## Estrutura do Repositório
 
 Nesse repositório, há três arquivos:
-* projeto_NN.ipynb
-* logo_projeto_final.jpg
-* README.md
+* SOLução Fármacos - Projeto Final NN.ipynb (notebook jupyter com o modelo)
+* logo_projeto_final.jpg (logo do projeto)
+* README.md (arquivo atual para guiar o usuário)
 
 
 ### Requisitos
