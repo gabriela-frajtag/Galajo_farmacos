@@ -1,4 +1,4 @@
-# Galajo Fármacos
+# Soluções Fármacos
 
 
 ## Introdução
