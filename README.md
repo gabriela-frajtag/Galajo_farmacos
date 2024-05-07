@@ -67,9 +67,9 @@ Para a execução correta do projeto, é necessário ter o ambiente configurado 
 
 ## Referências
 [1] DeepChem: API Reference (https://deepchem.readthedocs.io/) <br>
-[2] Jin, Wei, et al. "Molecular Representation for Structure-Based Drug Design." ChemRxiv (2017). (https://www.sciencedirect.com/science/article/pii/S2666166722008462)<br>
+[2] Zhenqin, et al. "MoleculeNet: A Benchmark for Molecular Machine Learning" ChemRxiv (2017). (https://arxiv.org/abs/1703.00564)<br>
 [3] Delaney, John, et al. "ESOL:  Estimating Aqueous Solubility Directly from Molecular Structure
-." ACS Chemical Information Bulletin 34.10 (2003): 2345-2352. (https://pubs.acs.org/doi/10.1021/ci034243x)<br>
+." ACS Chemical Information Bulletin 34.10 (2004): . (https://pubs.acs.org/doi/10.1021/ci034243x)<br>
 [4] Lightning: PyTorch Lightning (https://lightning.ai/docs/pytorch/stable/)<br>
 [5] "Rectifier (neural networks)." Wikipedia, The Free Encyclopedia. Last updated 18 April 2024. Web. 5 Maio 2024. <br>(https://en.wikipedia.org/wiki/Rectifier_%28neural_networks%29) <br>
 [6] "Convolutional Neural Networks for Visual Recognition." YouTube. Uploaded by Yann LeCun, 27 March 2014. Web. 5 Maio 2024. (https://www.youtube.com/playlist? list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv) <br>
